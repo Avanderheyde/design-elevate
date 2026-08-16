@@ -149,7 +149,8 @@ own tokens.
 | Future homepage | saaspo.com (page-type + stack filters; blacklist bento/gradient entries) + supahero.io (type-led heroes only) + landing.love filtered Minimal/Light (motion in full-page video). Pricing pages specifically: **noiced.com** (Maze Heart — a gallery of nothing but real pricing pages) |
 | Identity | rebrand.gallery (single-grotesque + signal-color brand systems — precedent for accent-slot rationing) + **logosystem.co** (1,300+ marks filterable by type — settle wordmark-vs-symbol against real precedent before drawing one) + **visualjournal.it** (Alessandro Scarpellini — reductive/modernist branding case studies) + floguo.com (Flora Guo — personality-through-restraint: version stamps, mono metadata, ASCII detail) |
 | Share / OG cards | **ogpedia.xyz** (Maze Heart) — a gallery of nothing but OG images; the only good source for the share-card surface, which almost every product ships as an afterthought |
-| Component mechanics | 21st.dev as a **code quarry only** — take sorting/sticky-header/virtualization mechanics, strip every visual decision |
+| AI-native interface primitives | **Beautiful UI** (Shane Levine / Turbo) — copy-paste React/Tailwind primitives for loading, thinking, streaming, approvals, tool calls, chat, recommendations, context, diffs, records, filters, search, code, and selection actions. Use only where the product has the matching interaction; adapt every visual token to DESIGN.md. Read [references/beautiful-ui.md](references/beautiful-ui.md) before copying code. |
+| General component mechanics | 21st.dev as a **code quarry only** — take sorting/sticky-header/virtualization mechanics, strip every visual decision |
 | Brand-system prose | voltagent/awesome-design-md — 73 reverse-engineered DESIGN.md files (Linear, The Verge, Vercel) as comparative references for your own DESIGN.md's rigor + **brandguidelines.net** (1042 Studio) — the real PDF brand books (Adobe, Spotify, IBM, Duolingo) those files imitate: how strict systems actually document type roles and ration a signal color |
 | Restraint calibration | **mnmm.xyz** (Maze Heart — minimal-site directory: what a page looks like with everything removable removed) + **recent.design** (broad daily curation, attributed to original creators). Both are firehoses — same discipline as Savee/Cosmos: structure only, and re-run the anti-pattern list on anything you take |
 
@@ -264,6 +265,33 @@ page at real viewports, compare to DESIGN.md and the approved mockups, fix,
 re-screenshot. Keep before/after shots. Mint temporary sessions for QA accounts
 and delete them after; restore any real data touched.
 
+## Portfolio sweep and PR mode
+
+When asked to elevate several repositories, treat the sweep as a queue of
+independent, reviewable projects — never one cross-repo redesign campaign:
+
+1. Inventory repositories and select only apps with a runnable user interface.
+   Record framework, package manager, run/test commands, DESIGN.md status,
+   default branch, remote, dirty-worktree state, and the smallest high-value
+   surface. Skip libraries, infrastructure, archived repos, and projects whose
+   existing changes cannot be isolated safely.
+2. Rank candidates by visible impact, confidence, and verification cost. Work
+   in that order. Do not force Beautiful UI into a non-AI product; use it only
+   when a real interaction maps to its catalog.
+3. For each project, create a dedicated branch and one focused PR. Preserve the
+   product's identity and existing component conventions. Prefer adapting one
+   complete, high-value flow over sprinkling cosmetic changes across the app.
+4. Run the per-page passes and QA loop above. Verify the repository's own
+   checks plus the changed flow at desktop and mobile widths. Preserve before
+   and after screenshots as PR evidence when the tooling allows it.
+5. In every PR, explain the user-facing problem, the DESIGN.md decisions, any
+   Beautiful UI component adapted, the source/license treatment, verification,
+   screenshots, and deliberate non-goals. Never bundle unrelated cleanup.
+
+If the user has not approved a visual direction, limit the sweep to audits and
+proposal PRs (DESIGN.md + mockups), unless the requested change is a narrow,
+reversible component improvement with an obvious fit.
+
 ## Zero-tolerance anti-patterns
 
 Flag and remove every hit in every review. Items 13–17 merged from Leon
@@ -372,6 +400,9 @@ This skill aggregates other people's work. Credit where it's due:
   respond-on-pointer-down), via Emil Kowalski's apple-design skill.
 - **gstack** — design-consultation / design compare boards / browse binary —
   the mockup-board approval loop's tooling.
+- **Shane Levine / Turbo** — beautifului.dev — MIT-licensed copy-paste
+  primitives for AI-native loading, thinking, streaming, approval, tool,
+  chat, data, and selection interfaces. See `references/beautiful-ui.md`.
 - Program lessons (tan-paper tell, content-encoding law, memorable-thing
   reframing, HTML-mockups-over-image-gen) were learned on the vibe-costs and
   vibeleaderboard redesign programs, 2026.
