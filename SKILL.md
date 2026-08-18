@@ -150,6 +150,7 @@ own tokens.
 | Identity | rebrand.gallery (single-grotesque + signal-color brand systems — precedent for accent-slot rationing) + **logosystem.co** (1,300+ marks filterable by type — settle wordmark-vs-symbol against real precedent before drawing one) + **visualjournal.it** (Alessandro Scarpellini — reductive/modernist branding case studies) + floguo.com (Flora Guo — personality-through-restraint: version stamps, mono metadata, ASCII detail) |
 | Share / OG cards | **ogpedia.xyz** (Maze Heart) — a gallery of nothing but OG images; the only good source for the share-card surface, which almost every product ships as an afterthought |
 | AI-native interface primitives | **Beautiful UI** (Shane Levine / Turbo) — copy-paste React/Tailwind primitives for loading, thinking, streaming, approvals, tool calls, chat, recommendations, context, diffs, records, filters, search, code, and selection actions. Use only where the product has the matching interaction; adapt every visual token to DESIGN.md. Read [references/beautiful-ui.md](references/beautiful-ui.md) before copying code. |
+| Generative waiting states | **Generative Loaders** (Kasturi Khanke) — accessible React loaders for text, inline, and image generation. Use only for a real generative operation whose latency benefits from a legible waiting state; never as decorative motion or a generic network spinner. Read [references/generative-loaders.md](references/generative-loaders.md) before adding the dependency. |
 | General component mechanics | 21st.dev as a **code quarry only** — take sorting/sticky-header/virtualization mechanics, strip every visual decision |
 | Brand-system prose | voltagent/awesome-design-md — 73 reverse-engineered DESIGN.md files (Linear, The Verge, Vercel) as comparative references for your own DESIGN.md's rigor + **brandguidelines.net** (1042 Studio) — the real PDF brand books (Adobe, Spotify, IBM, Duolingo) those files imitate: how strict systems actually document type roles and ration a signal color |
 | Restraint calibration | **mnmm.xyz** (Maze Heart — minimal-site directory: what a page looks like with everything removable removed) + **recent.design** (broad daily curation, attributed to original creators). Both are firehoses — same discipline as Savee/Cosmos: structure only, and re-run the anti-pattern list on anything you take |
@@ -174,6 +175,11 @@ skills need their sibling STANDARDS/AUDIT files:
   5–7 and keep a mandatory rejected-candidates section.
 - **Never animate data being read.** Motion on content under the user's eyes is
   decoration at best, sabotage at worst.
+- **A generative loader must encode a real wait.** Generative Loaders is a
+  candidate only for text, inline, or image generation with observable pending
+  state. Reject it for ordinary navigation, sub-second fetches, static sites,
+  or any product whose DESIGN.md forbids expressive loading motion. Never use a
+  loader to conceal indeterminate work or fake progress.
 - **Review as a hard gate** (`review-animations`): ease-in on enter is a block;
   sub-300ms for UI; no `scale(0)`; transform-origin from the trigger; GPU
   properties only; `prefers-reduced-motion` = gentler, not zero; flag-on-sight:
@@ -276,8 +282,8 @@ independent, reviewable projects — never one cross-repo redesign campaign:
    surface. Skip libraries, infrastructure, archived repos, and projects whose
    existing changes cannot be isolated safely.
 2. Rank candidates by visible impact, confidence, and verification cost. Work
-   in that order. Do not force Beautiful UI into a non-AI product; use it only
-   when a real interaction maps to its catalog.
+   in that order. Do not force Beautiful UI or Generative Loaders into a
+   product; use either only when a real interaction passes its reference gate.
 3. For each project, create a dedicated branch and one focused PR. Preserve the
    product's identity and existing component conventions. Prefer adapting one
    complete, high-value flow over sprinkling cosmetic changes across the app.
@@ -285,7 +291,7 @@ independent, reviewable projects — never one cross-repo redesign campaign:
    checks plus the changed flow at desktop and mobile widths. Preserve before
    and after screenshots as PR evidence when the tooling allows it.
 5. In every PR, explain the user-facing problem, the DESIGN.md decisions, any
-   Beautiful UI component adapted, the source/license treatment, verification,
+   external component adapted, the source/license treatment, verification,
    screenshots, and deliberate non-goals. Never bundle unrelated cleanup.
 
 If the user has not approved a visual direction, limit the sweep to audits and
@@ -403,6 +409,9 @@ This skill aggregates other people's work. Credit where it's due:
 - **Shane Levine / Turbo** — beautifului.dev — MIT-licensed copy-paste
   primitives for AI-native loading, thinking, streaming, approval, tool,
   chat, data, and selection interfaces. See `references/beautiful-ui.md`.
+- **Kasturi Khanke** — generativeloaders.com / github.com/kasturikhanke/generative-loaders
+  — MIT-licensed accessible React loaders for text, inline, and image
+  generation states. See `references/generative-loaders.md`.
 - Program lessons (tan-paper tell, content-encoding law, memorable-thing
   reframing, HTML-mockups-over-image-gen) were learned on the vibe-costs and
   vibeleaderboard redesign programs, 2026.
