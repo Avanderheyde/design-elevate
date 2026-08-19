@@ -144,6 +144,7 @@ own tokens.
 |---|---|
 | Ranked lists / leaderboards | **Mobbin** (shipped ranking screens: App Store charts, finance movers — row anatomy, delta indicators, mobile collapse) + **component.gallery** (Iain Bean — Table/Pagination/Tabs anatomy across 95 real design systems) |
 | Data-dense index typography | **Savee** (art-director taste density: timetables, annual reports, ruled tables) + **Cosmos** (attributed, AI-detecting: statistical atlases, Swiss print, isotype) |
+| Distinctive mono voice | **Departure Mono** (Helena Zhang) — a single-weight pixel mono informed by early CLI/GUI constraints and late-90s/early-00s interfaces. Consider it for a deliberately lo-fi display, metadata, label, or wordmark role; never default the whole product to it because it reads as "technical." Read [references/departure-mono.md](references/departure-mono.md) before adoption. |
 | Charts/maps | Print archives via Cosmos/Savee first, UI galleries second — a treemap's visual language lives in statistical atlases, not dashboards. **deck.gallery** for the same in deck form (investor/annual reports, trend reports — print-grade data layouts under a slide constraint) |
 | Nav (once) | navbar.gallery — Static/Sticky category for dense utilitarian bars |
 | Future homepage | saaspo.com (page-type + stack filters; blacklist bento/gradient entries) + supahero.io (type-led heroes only) + landing.love filtered Minimal/Light (motion in full-page video). Pricing pages specifically: **noiced.com** (Maze Heart — a gallery of nothing but real pricing pages) |
@@ -412,6 +413,10 @@ This skill aggregates other people's work. Credit where it's due:
 - **Kasturi Khanke** — generativeloaders.com / github.com/kasturikhanke/generative-loaders
   — MIT-licensed accessible React loaders for text, inline, and image
   generation states. See `references/generative-loaders.md`.
+- **Helena Zhang** — departuremono.com / github.com/rektdeckard/departure-mono
+  — Departure Mono, a SIL OFL 1.1 monospaced pixel font inspired by early
+  CLI/GUI constraints and late-90s/early-00s interfaces. See
+  `references/departure-mono.md`.
 - Program lessons (tan-paper tell, content-encoding law, memorable-thing
   reframing, HTML-mockups-over-image-gen) were learned on the vibe-costs and
   vibeleaderboard redesign programs, 2026.
