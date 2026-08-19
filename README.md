@@ -28,6 +28,13 @@ Or copy `SKILL.md` into your agent's skills directory, e.g. for Claude Code:
 mkdir -p ~/.claude/skills/design-elevate
 curl -o ~/.claude/skills/design-elevate/SKILL.md \
   https://raw.githubusercontent.com/Avanderheyde/design-elevate/main/SKILL.md
+mkdir -p ~/.claude/skills/design-elevate/references
+curl -o ~/.claude/skills/design-elevate/references/beautiful-ui.md \
+  https://raw.githubusercontent.com/Avanderheyde/design-elevate/main/references/beautiful-ui.md
+curl -o ~/.claude/skills/design-elevate/references/generative-loaders.md \
+  https://raw.githubusercontent.com/Avanderheyde/design-elevate/main/references/generative-loaders.md
+curl -o ~/.claude/skills/design-elevate/references/departure-mono.md \
+  https://raw.githubusercontent.com/Avanderheyde/design-elevate/main/references/departure-mono.md
 ```
 
 The skill references companion skills it orchestrates when they're available — see [SKILL.md → One-time setup](SKILL.md#one-time-setup-adopted-externals) for the recommended installs. It degrades gracefully when they're absent, but the per-page pass table works best with the full set.
